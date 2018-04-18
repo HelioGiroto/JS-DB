@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+	 
+<head>
+	<meta charset="UTF-8" />
+	<title>Busca Registros</title>
+
+	<script src="clientes.js"></script>
+
+	<script>
+	var repete = [];
+	var nome = "jos."
+	var regex = new RegExp(nome, 'gi');	
+
+	clientes.forEach(function(item, nro) {
+		
+		if (item[1].match(regex)) {
+			repete.push(nro);
+		};
+	
+		
+	});
+
+	document.write(repete);
+	console.log("OK");
+
+// https://pt.stackoverflow.com/questions/192633/como-definir-vari%C3%A1vel-dentro-do-m%C3%A9todo-match-string
+
+	</script>
+
+</head>
+<body>
+ 
+	<h1>Busca de clientes no Banco de Dados</h1>
+  <br>
+  <p><i>Este texto está em itálico</i></p>
+
+</body>
+</html>
+
