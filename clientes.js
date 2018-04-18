@@ -1,0 +1,1 @@
+var clientes = [["0", " "], ["1", "José Ataide Pereira", "11 1485 6796", "", "11", "", ""], ["2", "Ana Josefina da Mata", "5740 9068", "13 1393 0636", "n", "7", "Problema legal"], ["3", "Carlos José Rico", "55 2886 9909", "", "11", "", ""]];
