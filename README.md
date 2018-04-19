@@ -8,3 +8,7 @@ Como CONSULTAR cliente pelo nome (interface em HTML - só o esboço) - https://g
 Como VISUALIZAR registro por registro (tipo POO) - Amanhã....
 
 Como ACRESCENTAR registro (usando CGI Bash) - ...
+
+Autor: HGC
+
+[Sob licença MIT](https://github.com/HelioGiroto/JS-DB/blob/master/LICENSE)
