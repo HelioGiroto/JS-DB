@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+	<meta charset="UTF-8" />
+	<title>Consulta</title>
+	<style>
+		body{ background: green; }
+	</style>
+	<script src="clientes.js"></script>
+
+	<script>
+	function busca() {
+		var nome = document.getElementById("nome").value;
+		var regex = new RegExp(nome, 'gi');
+		var repete = [];
+		clientes.forEach(function(item, nro) {
+			if (item[1].match(regex)) {
+				repete.push(nro);
+			}
+
+			document.getElementById("resultado").innerHTML = "Encontrados: " + repete;
+		});
+
+		var listaNomes = "";		// Se omitir o resultado sai como indefinido.
+		var tam = repete.length;
+		var i;
+		for (i = 0; i < tam; i++) {
+			listaNomes += "<p>" + clientes[repete[i]] + "</p>";
+		}
+
+		document.getElementById("resultadoNome").innerHTML = listaNomes;
+		document.getElementById("total").innerHTML = tam + " registros encontrados";
+	}
+	</script>
+</head>
+
+<body>
+	<h1>Consulta de clientes</h1>
+	<p>-------------------</p>
+	<p><i>Digite abaixo o nome ou sobrenome a ser consultado (aceita REGEX)...</i></p>
+	<label>Nome: </label>
+	<input id="nome" type="text" onkeyup="bbusca()"/>
+	<button onclick="busca()">Busca!</button>
+	<br />
+	<h3 id="resultado"></h3>
+	<div id="resultadoNome"></div>
+	<h4 id="total"></h4>
+</body>
+
+</html>
+
