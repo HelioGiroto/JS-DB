@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+		<meta charset="UTF-8" />
+		<title>Álbum de Membros</title>
+		<link rel='stylesheet' href='style.css'>
+		<script src="miembros.js"></script>
+	<style>
+		body { background: yellow; }
+	</style>
+</head>
+
+<body>
+	<div id="aqui"></div>
+	<div id="result"></div>
+	<div id="ficha"></div>
+
+	<script>
+		function gde(e) {
+			arq = e.getAttribute("src");
+			document.getElementById("result").innerHTML = "<img src='" + arq + "' height='200'>";
+			nro = e.getAttribute("id");
+			document.getElementById("ficha").innerHTML = miembros[nro];
+		}
+
+		var album="";
+		var i;
+		for (i = 1; i <= 100; i++) {
+//			album+="<img onclick='gde(this)' height='80' src='f" + i + ".jpg' id='" + i + "'>";
+			document.getElementById("aqui").insertAdjacentHTML("beforebegin", "<img onclick='gde(this)' height='80' src='f" + i + ".jpg' id='" + i + "'>" );
+		}
+
+//		document.getElementById("aqui").innerHTML =  album;
+
+	</script>
+</body>
+</html>
